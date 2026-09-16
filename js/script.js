@@ -44,10 +44,37 @@ function showPage(list, page) {
 
 showPage(data, 1);
 /*
-Create the `addPagination` function
+Thhe `addPagination` function
 This function will create and insert/append the elements needed for the pagination buttons
 */
+function addPagination(list) {
+   // created a variable to calculate the 9 number of pages needed
+   const numOfPages = Math.ceil(list.length / 9);
+  // created a variable to select the element with a class of `link-list`
+   const linkList = document.querySelector('.link-list');
+  // set the innerHTML property of linkList to an empty string
+   linkList.innerHTML = "";
+  // loop over the number of pages needed
+   for(let i = 1; i <= numOfPages;i++) {
+       // created a variable to contain the elements needed to display the pagination button
+      const button = `
+         <li>
+            <button type="button">${i}</button>
+         </li>
+         `;
+      // inserting the above elements
+      linkList.insertAdjacentHTML('beforeend', button);
+   }
+   linkList.firstElementChild.firstElementChild.className = "active";
+}
+addPagination(data);
+  // give the first pagination button a class of "active"
 
+  // create an event listener on the `link-list` element
+    // if the click target is a button:
+      // remove the "active" class from the previous button
+      // add the active class to the clicked button
+      // call the showPage function passing the `list` parameter and page to display as arguments
 
 
 // Call functions
