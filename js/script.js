@@ -4,11 +4,6 @@ FSJS Project 2 - Data Pagination and Filtering
 */
 
 /*
-Would love some feedback on my comments - would it make more sense to have them in present terms
-instead of past? I'd like to turn the extra credit portion of this assignment in at a later time,
-not for points but for the experience and feedback, if possible. Thank you!
-
-/*
 Create the `showPage` function
 This function will create and insert/append the elements needed to display a "page" of nine students
 */
@@ -84,7 +79,6 @@ function addPagination(list) {
       }
    });
 }
-
 
 
 // Call functions
